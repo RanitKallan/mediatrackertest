@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Media Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+
+  <script>
+    // Initialize Firebase with your project's config
+    const firebaseConfig = {
+         apiKey: "AIzaSyB4zuY75vn1Bd3AzlOZa_lm96fwOv_f4LA",
+         authDomain: "anime-list-bd85c.firebaseapp.com",
+         projectId: "anime-list-bd85c",
+         storageBucket: "anime-list-bd85c.firebasestorage.app",
+         messagingSenderId: "885351876176",
+         appId: "1:885351876176:web:1787abbca8bf82dd46b355",
+         measurementId: "G-FR303VC5Z0"
+        };
+            firebase.initializeApp(firebaseConfig);
+
+    // Function to check if a user is logged in or not
+    function checkAuthState() {
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (!user) {
+          // User is not signed in, redirect to the login page
+          window.location.href = "./login/signup/signup.html";
+        }
+      });
+    }
+  </script>
+</head>
+<body onload="checkAuthState()">
+    <div class="index-container">
+        <div class="header-container">
+            <div class="site-title">
+                <span class="title-decoration"></span>
+                <h1>My Media Tracker</h1>
+                <span class="title-decoration"></span>
+            </div>
+            <div class="login-area">
+            <a href="./login/signup/login.html" class="login-button">Login/SignUp</a>
+            </div>
+        </div>
+        <div class="index-content">
+            <div class="index-section">
+                <div class="index-image-container">
+                    <img src="./Images/Attack on titan.jpg" alt="Anime Preview" class="index-preview-image">
+                </div>
+                <h2>Track Your Favorite Anime</h2>
+                <p>Keep a record of all the anime you've watched, discover new series, and manage your watchlist.</p>
+                <a href="anime.html" class="index-button">Go to Anime</a>
+            </div>
+            <div class="index-section">
+                <div class="index-image-container">
+                    <img src="./Images/thumb-1920-1240417.png" alt="Top 10 Preview" class="index-preview-image">
+                </div>
+                <h2>List Your top 10 Anime</h2>
+                <p>Rank your all-time favorite anime and build your personal Top 10 list.</p>
+                <a href="games.html" class="index-button">Go to The List</a>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2026 My Media Tracker</p>
+        </footer>
+    </div>
+</body>
+</html>
