@@ -18,17 +18,7 @@
          measurementId: "G-FR303VC5Z0"
         };
             firebase.initializeApp(firebaseConfig);
-
-    // Function to check if a user is logged in or not
-    function checkAuthState() {
-      firebase.auth().onAuthStateChanged(function(user) {
-        if (!user) {
-          // User is not signed in, redirect to the login page
-          window.location.href = "./login/signup/signup.html";
-        }
-      });
-    }
-  </script>
+    </script>
 </head>
 <body onload="checkAuthState()">
     <div class="index-container">
