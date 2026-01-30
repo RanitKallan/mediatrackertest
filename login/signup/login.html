@@ -5,34 +5,6 @@
     <link rel="stylesheet" href="login.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
-
-  <script>
-    
-    const firebaseConfig = {
-         apiKey: "AIzaSyB4zuY75vn1Bd3AzlOZa_lm96fwOv_f4LA",
-         authDomain: "anime-list-bd85c.firebaseapp.com",
-         projectId: "anime-list-bd85c",
-         storageBucket: "anime-list-bd85c.firebasestorage.app",
-         messagingSenderId: "885351876176",
-         appId: "1:885351876176:web:1787abbca8bf82dd46b355",
-         measurementId: "G-FR303VC5Z0"
-    };
-    firebase.initializeApp(firebaseConfig);
-  </script>
-  <script>
-    // Function to check if a user is logged in or not
-    function checkAuthState() {
-      firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-          // User is signed in, proceed to the website
-          window.location.href = ".../index.html";
-        } else {
-          // No user is signed in, stay on the login page
-        }
-      });
-    }</script>
 </head>
 <body>
     <div class="container">
